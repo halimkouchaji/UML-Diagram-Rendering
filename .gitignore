@@ -12,8 +12,11 @@
 
 # Build output
 x64/
+**/x64/
 Debug/
 Release/
+**/Debug/
+**/Release/
 build/
 Build/
 build-*/
@@ -33,6 +36,7 @@ compile_commands.json
 *.dll
 *.lib
 *.pdb
+*.ilk
 
 # Temporary files
 *.tmp
