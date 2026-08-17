@@ -5,8 +5,9 @@
 *.code-workspace
 
 # vcpkg
-vcpkg/
-vcpkg_installed/
+/vcpkg/
+/vcpkg_installed/
+
 # Visual Studio
 *.user
 *.suo
