@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{a70c070d-b322-4e31-89c2-2a2ee3900d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{1cfb7a50-3f48-4ab5-b7bd-63e1817730fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jason">
+      <UniqueIdentifier>{3824746f-15ef-4b3a-811e-e4d9c9efe296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Svg">
+      <UniqueIdentifier>{316e42bd-524b-4af2-87be-bec0b88b4bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{6a0cb144-8322-432d-b72f-c39d403489fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="model.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="XmiParser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="HierarchyBuilder.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeSizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerAssigner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerOrderer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="CoordinateAssigner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgeRouter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlapResolver.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonExporter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="SvgRenderer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="SvgExporter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Activitymodel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Activitygraphbuilder.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Activityflowanalyzer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Activityswimlaneanalyzer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Activitylayerassigner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Activityorderassigner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivityCoordinateAssigner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivityEdgeRouter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivityLayoutCleaner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivitySvgRenderer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivityXmiParser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivityJsonExporter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmiParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="HierarchyBuilder.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeSizer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="LayerAssigner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="LayerOrderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="CoordinateAssigner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EdgeRouter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlapResolver.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonExporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="SvgRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="SvgExporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Activitygraphbuilder.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Activityswimlaneanalyzer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Activitylayerassigner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Activityorderassigner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivityCoordinateAssigner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivityEdgeRouter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivityLayoutCleaner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivitySvgRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivityXmiParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivityJsonExporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ActivityFlowAnalyze.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sample.xmi" />
+  </ItemGroup>
+</Project>

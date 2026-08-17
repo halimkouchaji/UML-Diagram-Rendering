@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="UMLClassRenderer/UMLClassRenderer.vcxproj" Id="7a205649-89ce-461c-925a-ecf173aa2073" />
+</Solution>

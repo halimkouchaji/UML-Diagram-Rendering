@@ -1,0 +1,95 @@
+{
+  "classes": [
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "type_String",
+          "visibility": "private"
+        }
+      ],
+      "height": 90.0,
+      "id": "cls_Animal",
+      "level": 0,
+      "name": "Animal",
+      "operations": [
+        {
+          "name": "makeSound",
+          "returnType": "",
+          "visibility": "public"
+        }
+      ],
+      "width": 157.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 70.0,
+      "id": "cls_Dog",
+      "level": 1,
+      "name": "Dog",
+      "operations": [
+        {
+          "name": "bark",
+          "returnType": "",
+          "visibility": "public"
+        }
+      ],
+      "width": 120.0,
+      "x": 18.5,
+      "y": 150.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "ownerName",
+          "type": "type_String",
+          "visibility": "private"
+        }
+      ],
+      "height": 70.0,
+      "id": "cls_Owner",
+      "level": 0,
+      "name": "Owner",
+      "operations": [],
+      "width": 192.0,
+      "x": 215.5,
+      "y": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "from": "cls_Dog",
+      "id": "gen_dog_animal",
+      "points": [
+        {
+          "x": 78.5,
+          "y": 150.0
+        },
+        {
+          "x": 78.5,
+          "y": 90.0
+        }
+      ],
+      "to": "cls_Animal",
+      "type": "generalization"
+    },
+    {
+      "from": "cls_Owner",
+      "id": "assoc_owns",
+      "points": [
+        {
+          "x": 215.5,
+          "y": 35.0
+        },
+        {
+          "x": 138.5,
+          "y": 185.0
+        }
+      ],
+      "to": "cls_Dog",
+      "type": "association"
+    }
+  ]
+}

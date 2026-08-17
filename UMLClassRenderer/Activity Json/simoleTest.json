@@ -1,0 +1,28 @@
+{
+  "diagramType": "ActivityDiagram",
+  "width": 543,
+  "height": 1204,
+  "swimlanes": [
+    {"id":"__unassigned__","name":"","x":40,"y":40,"width":463,"height":1124}
+  ],
+  "nodes": [
+    {"id":"start","name":"Start","type":"Initial","swimlaneId":"__unassigned__","layer":0,"orderInLayer":0,"x":149.5,"y":110,"width":24,"height":24},
+    {"id":"enterUsername","name":"Enter Username","type":"Action","swimlaneId":"__unassigned__","layer":1,"orderInLayer":0,"x":91,"y":240,"width":141,"height":54},
+    {"id":"enterPassword","name":"Enter Password","type":"Action","swimlaneId":"__unassigned__","layer":2,"orderInLayer":0,"x":91,"y":370,"width":141,"height":54},
+    {"id":"checkCredentials","name":"Check Credentials","type":"Action","swimlaneId":"__unassigned__","layer":3,"orderInLayer":0,"x":79.75,"y":500,"width":163.5,"height":54},
+    {"id":"decision1","name":"Valid?","type":"Decision","swimlaneId":"__unassigned__","layer":4,"orderInLayer":0,"x":125.5,"y":630,"width":72,"height":56},
+    {"id":"openHome","name":"Open Home Page","type":"Action","swimlaneId":"__unassigned__","layer":5,"orderInLayer":0,"x":91,"y":760,"width":141,"height":54},
+    {"id":"showError","name":"Show Error Message","type":"Action","swimlaneId":"__unassigned__","layer":5,"orderInLayer":1,"x":256,"y":760,"width":171,"height":54},
+    {"id":"end","name":"End","type":"ActivityFinal","swimlaneId":"__unassigned__","layer":6,"orderInLayer":0,"x":145.5,"y":890,"width":32,"height":32}
+  ],
+  "flows": [
+    {"id":"flow1","type":"Control","fromId":"start","toId":"enterUsername","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":134},{"x":161.5,"y":187},{"x":161.5,"y":187},{"x":161.5,"y":240}]},
+    {"id":"flow2","type":"Control","fromId":"enterUsername","toId":"enterPassword","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":294},{"x":161.5,"y":332},{"x":161.5,"y":332},{"x":161.5,"y":370}]},
+    {"id":"flow3","type":"Control","fromId":"enterPassword","toId":"checkCredentials","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":424},{"x":161.5,"y":462},{"x":161.5,"y":462},{"x":161.5,"y":500}]},
+    {"id":"flow4","type":"Control","fromId":"checkCredentials","toId":"decision1","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":554},{"x":161.5,"y":592},{"x":161.5,"y":592},{"x":161.5,"y":630}]},
+    {"id":"flow5","type":"Control","fromId":"decision1","toId":"openHome","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":686},{"x":161.5,"y":723},{"x":161.5,"y":723},{"x":161.5,"y":760}]},
+    {"id":"flow6","type":"Control","fromId":"decision1","toId":"showError","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":686},{"x":161.5,"y":723},{"x":341.5,"y":723},{"x":341.5,"y":760}]},
+    {"id":"flow7","type":"Control","fromId":"openHome","toId":"end","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":161.5,"y":814},{"x":161.5,"y":852},{"x":161.5,"y":852},{"x":161.5,"y":890}]},
+    {"id":"flow8","type":"Control","fromId":"showError","toId":"end","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":341.5,"y":814},{"x":341.5,"y":852},{"x":161.5,"y":852},{"x":161.5,"y":890}]}
+  ]
+}

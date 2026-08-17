@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001">
+
+    <uml:Model xmi:id="model1" name="Shopping Checkout">
+
+        <packagedElement
+            xmi:type="uml:Activity"
+            xmi:id="activity1"
+            name="Checkout Process">
+
+
+            <!-- Nodes -->
+
+            <node
+                xmi:type="uml:InitialNode"
+                xmi:id="start"
+                name="Start"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="browse"
+                name="Browse Products"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="addCart"
+                name="Add Product To Cart"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="checkout"
+                name="Go To Checkout"/>
+
+
+            <node
+                xmi:type="uml:DecisionNode"
+                xmi:id="paymentDecision"
+                name="Payment Successful?"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="confirmOrder"
+                name="Confirm Order"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="paymentError"
+                name="Show Payment Error"/>
+
+
+            <node
+                xmi:type="uml:MergeNode"
+                xmi:id="merge"
+                name="Continue"/>
+
+
+            <node
+                xmi:type="uml:ActivityFinalNode"
+                xmi:id="end"
+                name="End"/>
+
+
+
+            <!-- Edges -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e1"
+                source="start"
+                target="browse"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e2"
+                source="browse"
+                target="addCart"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e3"
+                source="addCart"
+                target="checkout"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e4"
+                source="checkout"
+                target="paymentDecision"/>
+
+
+            <!-- Successful payment -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e5"
+                source="paymentDecision"
+                target="confirmOrder"/>
+
+
+            <!-- Failed payment -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e6"
+                source="paymentDecision"
+                target="paymentError"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e7"
+                source="paymentError"
+                target="merge"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e8"
+                source="confirmOrder"
+                target="merge"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="e9"
+                source="merge"
+                target="end"/>
+
+
+        </packagedElement>
+
+    </uml:Model>
+
+</xmi:XMI>

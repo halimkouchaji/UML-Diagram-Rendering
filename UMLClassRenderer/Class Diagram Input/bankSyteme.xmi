@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001">
+
+  <uml:Model xmi:id="model2" name="BankSystem">
+
+    <!-- ================= CLASSES ================= -->
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Account" name="Account">
+      <ownedAttribute xmi:id="a1" name="balance" type="double"/>
+      <ownedOperation xmi:id="o1" name="deposit"/>
+      <ownedOperation xmi:id="o2" name="withdraw"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="SavingsAccount" name="SavingsAccount">
+      <generalization xmi:id="g1" general="Account"/>
+      <ownedAttribute xmi:id="a2" name="interestRate" type="double"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Customer" name="Customer">
+      <ownedAttribute xmi:id="a3" name="name" type="String"/>
+      <ownedAttribute xmi:id="a4" name="id" type="String"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Bank" name="Bank">
+      <ownedAttribute xmi:id="a5" name="name" type="String"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Loan" name="Loan">
+      <ownedAttribute xmi:id="a6" name="amount" type="double"/>
+    </packagedElement>
+
+    <!-- ================= ASSOCIATIONS ================= -->
+
+    <!-- Bank manages Customers -->
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="assoc1"
+                     memberEnd="BankEnd CustomerEnd">
+      <ownedEnd xmi:id="BankEnd" type="Bank"/>
+      <ownedEnd xmi:id="CustomerEnd" type="Customer"/>
+    </packagedElement>
+
+    <!-- Customer owns Accounts -->
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="assoc2"
+                     memberEnd="CustomerEnd2 AccountEnd">
+      <ownedEnd xmi:id="CustomerEnd2" type="Customer"/>
+      <ownedEnd xmi:id="AccountEnd" type="Account"/>
+    </packagedElement>
+
+    <!-- ================= AGGREGATION ================= -->
+
+    <!-- Bank aggregates Accounts -->
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="agg1"
+                     memberEnd="BankEnd2 AccountEnd2">
+      <ownedEnd xmi:id="BankEnd2"
+                type="Bank"
+                aggregation="shared"/>
+      <ownedEnd xmi:id="AccountEnd2"
+                type="Account"/>
+    </packagedElement>
+
+    <!-- ================= COMPOSITION ================= -->
+
+    <!-- Bank composes Loans -->
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="comp1"
+                     memberEnd="BankEnd3 LoanEnd">
+      <ownedEnd xmi:id="BankEnd3"
+                type="Bank"
+                aggregation="composite"/>
+      <ownedEnd xmi:id="LoanEnd"
+                type="Loan"/>
+    </packagedElement>
+
+  </uml:Model>
+
+</xmi:XMI>

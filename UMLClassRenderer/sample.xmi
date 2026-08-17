@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1"
+         xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
+         xmlns:uml="http://schema.omg.org/spec/UML/2.1">
+	<uml:Model xmi:id="model_1" name="SampleModel">
+
+		<packagedElement xmi:type="uml:Class" xmi:id="cls_Animal" name="Animal">
+			<ownedAttribute xmi:id="attr_name" name="name" visibility="private" type="type_String"/>
+			<ownedOperation xmi:id="op_makeSound" name="makeSound" visibility="public"/>
+		</packagedElement>
+
+		<packagedElement xmi:type="uml:Class" xmi:id="cls_Dog" name="Dog">
+			<generalization xmi:id="gen_dog_animal" general="cls_Animal"/>
+			<ownedOperation xmi:id="op_bark" name="bark" visibility="public"/>
+		</packagedElement>
+
+		<packagedElement xmi:type="uml:Class" xmi:id="cls_Owner" name="Owner">
+			<ownedAttribute xmi:id="attr_ownerName" name="ownerName" visibility="private" type="type_String"/>
+		</packagedElement>
+
+		<packagedElement xmi:type="uml:Association" xmi:id="assoc_owns" name="owns" memberEnd="end_owner end_dog">
+			<ownedEnd xmi:id="end_owner" type="cls_Owner" aggregation="none"/>
+			<ownedEnd xmi:id="end_dog" type="cls_Dog" aggregation="none"/>
+		</packagedElement>
+
+	</uml:Model>
+</xmi:XMI>

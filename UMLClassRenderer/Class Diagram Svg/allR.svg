@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 338" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1320" height="338" fill="white"/>
+<defs>
+<marker id="triangle-hollow" markerWidth="16" markerHeight="12" refX="15" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L15,6 L1,11 Z" fill="white" stroke="black" stroke-width="1"/></marker>
+<marker id="diamond-hollow" markerWidth="18" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,5 L9,1 L17,5 L9,9 Z" fill="white" stroke="black" stroke-width="1"/></marker>
+<marker id="diamond-filled" markerWidth="18" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,5 L9,1 L17,5 L9,9 Z" fill="black" stroke="black" stroke-width="1"/></marker>
+<marker id="arrow-open" markerWidth="14" markerHeight="12" refX="12" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L12,6 L1,11" fill="none" stroke="black" stroke-width="1.3"/></marker>
+</defs>
+<g stroke="black" fill="none">
+<polyline points="100,208 180,148" stroke="black" stroke-width="1.4" fill="none" marker-end="url(#triangle-hollow)"/>
+<polyline points="260,208 180,148" stroke="black" stroke-width="1.4" fill="none" marker-end="url(#triangle-hollow)"/>
+<polyline points="100,208 100,110" stroke="black" stroke-width="1.4" fill="none" stroke-dasharray="6,4" marker-end="url(#triangle-hollow)"/>
+<polyline points="160,253 1160,65" stroke="black" stroke-width="1.4" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow-open)"/>
+<polyline points="320,243 1160,65" stroke="black" stroke-width="1.4" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow-open)"/>
+<polyline points="160,253 360,75" stroke="black" stroke-width="1.4" fill="none" marker-end="url(#arrow-open)"/>
+<polyline points="520,65 320,243" stroke="black" stroke-width="1.4" fill="none" marker-start="url(#diamond-hollow)"/>
+<polyline points="680,65 640,65" stroke="black" stroke-width="1.4" fill="none" marker-start="url(#diamond-filled)"/>
+<polyline points="960,65 1000,65" stroke="black" stroke-width="1.4" fill="none" marker-start="url(#diamond-filled)"/>
+</g>
+<g>
+<rect x="40" y="40" width="120" height="70" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="100" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Printable</text>
+<line x1="40" y1="90" x2="160" y2="90" stroke="black" stroke-width="1"/>
+<text x="48" y="103.6" font-size="12">- print()</text>
+</g>
+<g>
+<rect x="180" y="40" width="120" height="108" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="240" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Person</text>
+<line x1="180" y1="90" x2="300" y2="90" stroke="black" stroke-width="1"/>
+<text x="188" y="103.6" font-size="12">- name : </text>
+<text x="188" y="123.6" font-size="12">- age : </text>
+<line x1="180" y1="130" x2="300" y2="130" stroke="black" stroke-width="1"/>
+<text x="188" y="143.6" font-size="12">- walk()</text>
+</g>
+<g>
+<rect x="40" y="208" width="120" height="90" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="100" y="237.667" font-size="14" font-weight="bold" text-anchor="middle">Student</text>
+<line x1="40" y1="258" x2="160" y2="258" stroke="black" stroke-width="1"/>
+<text x="48" y="271.6" font-size="12">- studentId : </text>
+<line x1="40" y1="278" x2="160" y2="278" stroke="black" stroke-width="1"/>
+<text x="48" y="291.6" font-size="12">- study()</text>
+</g>
+<g>
+<rect x="200" y="208" width="120" height="70" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="260" y="237.667" font-size="14" font-weight="bold" text-anchor="middle">Teacher</text>
+<line x1="200" y1="258" x2="320" y2="258" stroke="black" stroke-width="1"/>
+<text x="208" y="271.6" font-size="12">- teach()</text>
+</g>
+<g>
+<rect x="360" y="40" width="120" height="70" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="420" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Course</text>
+<line x1="360" y1="90" x2="480" y2="90" stroke="black" stroke-width="1"/>
+<text x="368" y="103.6" font-size="12">- title : </text>
+</g>
+<g>
+<rect x="520" y="40" width="120" height="50" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="580" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Department</text>
+</g>
+<g>
+<rect x="680" y="40" width="120" height="50" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="740" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">University</text>
+</g>
+<g>
+<rect x="840" y="40" width="120" height="50" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="900" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Library</text>
+</g>
+<g>
+<rect x="1000" y="40" width="120" height="50" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="1060" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Book</text>
+</g>
+<g>
+<rect x="1160" y="40" width="120" height="50" fill="#fdfdfd" stroke="black" stroke-width="1.2"/>
+<text x="1220" y="69.6667" font-size="14" font-weight="bold" text-anchor="middle">Printer</text>
+</g>
+</svg>

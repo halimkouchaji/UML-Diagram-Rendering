@@ -1,0 +1,30 @@
+{
+  "diagramType": "ActivityDiagram",
+  "width": 550.5,
+  "height": 1334,
+  "swimlanes": [
+    {"id":"__unassigned__","name":"","x":40,"y":40,"width":470.5,"height":1254}
+  ],
+  "nodes": [
+    {"id":"start","name":"Start","type":"Initial","swimlaneId":"__unassigned__","layer":0,"orderInLayer":0,"x":153.25,"y":110,"width":24,"height":24},
+    {"id":"browse","name":"Browse Products","type":"Action","swimlaneId":"__unassigned__","layer":1,"orderInLayer":0,"x":91,"y":240,"width":148.5,"height":54},
+    {"id":"addCart","name":"Add Product To Cart","type":"Action","swimlaneId":"__unassigned__","layer":2,"orderInLayer":0,"x":76,"y":370,"width":178.5,"height":54},
+    {"id":"checkout","name":"Go To Checkout","type":"Action","swimlaneId":"__unassigned__","layer":3,"orderInLayer":0,"x":94.75,"y":500,"width":141,"height":54},
+    {"id":"paymentDecision","name":"Payment Successful?","type":"Decision","swimlaneId":"__unassigned__","layer":4,"orderInLayer":0,"x":129.25,"y":630,"width":72,"height":56},
+    {"id":"confirmOrder","name":"Confirm Order","type":"Action","swimlaneId":"__unassigned__","layer":5,"orderInLayer":0,"x":98.5,"y":760,"width":133.5,"height":54},
+    {"id":"paymentError","name":"Show Payment Error","type":"Action","swimlaneId":"__unassigned__","layer":5,"orderInLayer":1,"x":256,"y":760,"width":171,"height":54},
+    {"id":"merge","name":"Continue","type":"Merge","swimlaneId":"__unassigned__","layer":6,"orderInLayer":0,"x":129.25,"y":890,"width":72,"height":56},
+    {"id":"end","name":"End","type":"ActivityFinal","swimlaneId":"__unassigned__","layer":7,"orderInLayer":0,"x":149.25,"y":1020,"width":32,"height":32}
+  ],
+  "flows": [
+    {"id":"e1","type":"Control","fromId":"start","toId":"browse","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":134},{"x":165.25,"y":187},{"x":165.25,"y":187},{"x":165.25,"y":240}]},
+    {"id":"e2","type":"Control","fromId":"browse","toId":"addCart","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":294},{"x":165.25,"y":332},{"x":165.25,"y":332},{"x":165.25,"y":370}]},
+    {"id":"e3","type":"Control","fromId":"addCart","toId":"checkout","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":424},{"x":165.25,"y":462},{"x":165.25,"y":462},{"x":165.25,"y":500}]},
+    {"id":"e4","type":"Control","fromId":"checkout","toId":"paymentDecision","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":554},{"x":165.25,"y":592},{"x":165.25,"y":592},{"x":165.25,"y":630}]},
+    {"id":"e5","type":"Control","fromId":"paymentDecision","toId":"confirmOrder","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":686},{"x":165.25,"y":723},{"x":165.25,"y":723},{"x":165.25,"y":760}]},
+    {"id":"e6","type":"Control","fromId":"paymentDecision","toId":"paymentError","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":686},{"x":165.25,"y":723},{"x":341.5,"y":723},{"x":341.5,"y":760}]},
+    {"id":"e7","type":"Control","fromId":"paymentError","toId":"merge","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":341.5,"y":814},{"x":341.5,"y":852},{"x":165.25,"y":852},{"x":165.25,"y":890}]},
+    {"id":"e8","type":"Control","fromId":"confirmOrder","toId":"merge","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":814},{"x":165.25,"y":852},{"x":165.25,"y":852},{"x":165.25,"y":890}]},
+    {"id":"e9","type":"Control","fromId":"merge","toId":"end","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":165.25,"y":946},{"x":165.25,"y":983},{"x":165.25,"y":983},{"x":165.25,"y":1020}]}
+  ]
+}

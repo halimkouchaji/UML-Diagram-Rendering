@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML">
+  <uml:Model xmi:type="uml:Model" xmi:id="model_1" name="OrderProcessingModel">
+
+    <packagedElement xmi:type="uml:Activity" xmi:id="activity_1" name="ProcessOrder">
+
+      <!-- ==================== SWIMLANES (ACTIVITY PARTITIONS) ==================== -->
+
+      <partition xmi:type="uml:ActivityPartition" xmi:id="partition_customer" name="Customer"/>
+      <partition xmi:type="uml:ActivityPartition" xmi:id="partition_sales" name="Sales"/>
+      <partition xmi:type="uml:ActivityPartition" xmi:id="partition_warehouse" name="Warehouse"/>
+      <partition xmi:type="uml:ActivityPartition" xmi:id="partition_shipping" name="Shipping"/>
+
+      <!-- ==================== NODES ==================== -->
+
+      <!-- Initial Node : Customer lane -->
+      <node xmi:type="uml:InitialNode" xmi:id="node_initial" name="Start"
+            inPartition="partition_customer"/>
+
+      <!-- Action: Place Order : Customer lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_placeOrder" name="Place Order"
+            inPartition="partition_customer"/>
+
+      <!-- Action: Receive Order : Sales lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_receiveOrder" name="Receive Order"
+            inPartition="partition_sales"/>
+
+      <!-- Decision Node : Sales lane -->
+      <node xmi:type="uml:DecisionNode" xmi:id="node_decision" name="Payment Valid?"
+            inPartition="partition_sales"/>
+
+      <!-- Action: Reject Order (false branch) : Sales lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_rejectOrder" name="Reject Order"
+            inPartition="partition_sales"/>
+
+      <!-- Action: Accept Order (true branch) : Sales lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_acceptOrder" name="Accept Order"
+            inPartition="partition_sales"/>
+
+      <!-- Merge Node : Sales lane -->
+      <node xmi:type="uml:MergeNode" xmi:id="node_merge" name="Merge"
+            inPartition="partition_sales"/>
+
+      <!-- Fork Node : Sales lane -->
+      <node xmi:type="uml:ForkNode" xmi:id="node_fork" name="Fork"
+            inPartition="partition_sales"/>
+
+      <!-- Action: Pack Items (parallel branch 1) : Warehouse lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_packItems" name="Pack Items"
+            inPartition="partition_warehouse"/>
+
+      <!-- Action: Notify Customer (parallel branch 2) : Customer lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_notifyCustomer" name="Notify Customer"
+            inPartition="partition_customer"/>
+
+      <!-- Join Node : Warehouse lane -->
+      <node xmi:type="uml:JoinNode" xmi:id="node_join" name="Join"
+            inPartition="partition_warehouse"/>
+
+      <!-- Action: Ship Order : Shipping lane -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_shipOrder" name="Ship Order"
+            inPartition="partition_shipping"/>
+
+      <!-- Activity Final Node : Shipping lane -->
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="node_final" name="End"
+            inPartition="partition_shipping"/>
+
+      <!-- ==================== EDGES ==================== -->
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_1"
+            source="node_initial" target="node_placeOrder"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_2"
+            source="node_placeOrder" target="node_receiveOrder"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_3"
+            source="node_receiveOrder" target="node_decision"/>
+
+      <!-- True branch -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_4"
+            source="node_decision" target="node_acceptOrder">
+        <guard xmi:type="uml:LiteralString" xmi:id="guard_true" value="valid"/>
+      </edge>
+
+      <!-- False branch -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_5"
+            source="node_decision" target="node_rejectOrder">
+        <guard xmi:type="uml:LiteralString" xmi:id="guard_false" value="invalid"/>
+      </edge>
+
+      <!-- Reject leads straight to final -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_6"
+            source="node_rejectOrder" target="node_final"/>
+
+      <!-- Accept feeds merge -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_7"
+            source="node_acceptOrder" target="node_merge"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_8"
+            source="node_merge" target="node_fork"/>
+
+      <!-- Fork into two parallel actions -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_9"
+            source="node_fork" target="node_packItems"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_10"
+            source="node_fork" target="node_notifyCustomer"/>
+
+      <!-- Join synchronizes the two parallel actions -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_11"
+            source="node_packItems" target="node_join"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_12"
+            source="node_notifyCustomer" target="node_join"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_13"
+            source="node_join" target="node_shipOrder"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_14"
+            source="node_shipOrder" target="node_final"/>
+
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>

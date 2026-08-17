@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001">
+
+  <uml:Model xmi:id="model1" name="LibrarySystem">
+
+    <!-- ===================== CLASSES ===================== -->
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Person" name="Person">
+      <ownedAttribute xmi:id="a1" name="name" type="String"/>
+      <ownedAttribute xmi:id="a2" name="age" type="int"/>
+      <ownedOperation xmi:id="o1" name="getName"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Member" name="Member">
+      <generalization xmi:id="g1" general="Person"/>
+      <ownedAttribute xmi:id="a3" name="memberId" type="String"/>
+      <ownedOperation xmi:id="o2" name="borrowBook"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Librarian" name="Librarian">
+      <generalization xmi:id="g2" general="Person"/>
+      <ownedAttribute xmi:id="a4" name="employeeId" type="String"/>
+      <ownedOperation xmi:id="o3" name="addBook"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Book" name="Book">
+      <ownedAttribute xmi:id="a5" name="title" type="String"/>
+      <ownedAttribute xmi:id="a6" name="isbn" type="String"/>
+      <ownedOperation xmi:id="o4" name="isAvailable"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Author" name="Author">
+      <ownedAttribute xmi:id="a7" name="name" type="String"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Library" name="Library">
+      <ownedAttribute xmi:id="a8" name="address" type="String"/>
+      <ownedOperation xmi:id="o5" name="searchBook"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Catalog" name="Catalog">
+      <ownedOperation xmi:id="o6" name="findBook"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Interface" xmi:id="Printable" name="Printable"/>
+
+    <!-- ===================== ASSOCIATIONS ===================== -->
+
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="assoc1"
+                     memberEnd="LibraryEnd BookEnd">
+        <ownedEnd xmi:id="LibraryEnd" type="Library"/>
+        <ownedEnd xmi:id="BookEnd" type="Book"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="assoc2"
+                     memberEnd="AuthorEnd BookEnd2">
+        <ownedEnd xmi:id="AuthorEnd" type="Author"/>
+        <ownedEnd xmi:id="BookEnd2" type="Book"/>
+    </packagedElement>
+
+    <!-- ===================== AGGREGATION ===================== -->
+
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="agg1"
+                     memberEnd="CatalogEnd BookEnd3">
+        <ownedEnd xmi:id="CatalogEnd"
+                  type="Catalog"
+                  aggregation="shared"/>
+        <ownedEnd xmi:id="BookEnd3"
+                  type="Book"/>
+    </packagedElement>
+
+    <!-- ===================== COMPOSITION ===================== -->
+
+    <packagedElement xmi:type="uml:Association"
+                     xmi:id="comp1"
+                     memberEnd="LibraryEnd2 CatalogEnd2">
+        <ownedEnd xmi:id="LibraryEnd2"
+                  type="Library"
+                  aggregation="composite"/>
+        <ownedEnd xmi:id="CatalogEnd2"
+                  type="Catalog"/>
+    </packagedElement>
+
+    <!-- ===================== DEPENDENCY ===================== -->
+
+    <packagedElement
+        xmi:type="uml:Dependency"
+        xmi:id="dep1"
+        client="Librarian"
+        supplier="Catalog"/>
+
+    <!-- ===================== REALIZATION ===================== -->
+
+    <packagedElement
+        xmi:type="uml:Realization"
+        xmi:id="real1"
+        client="Book"
+        supplier="Printable"/>
+
+  </uml:Model>
+
+</xmi:XMI>

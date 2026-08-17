@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="2504" viewBox="0 0 1254 2504">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#222" />
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="white" />
+<g id="swimlanes">
+<rect x="40" y="40" width="308" height="2424" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="40" y="40" width="308" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="52" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Customer</text>
+<rect x="348" y="40" width="440.5" height="2424" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="348" y="40" width="440.5" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="360" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Sales</text>
+<rect x="788.5" y="40" width="425.5" height="2424" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="788.5" y="40" width="425.5" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="800.5" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Warehouse</text>
+</g>
+<g id="edges-control">
+<polyline points="139,134 139,187 139,187 139,240 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="139,294 139,332 139,332 139,370 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="139,424 139,462 458.25,462 458.25,500 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,556 458.25,593 458.25,593 458.25,630 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,684 458.25,722 458.25,722 458.25,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,556 458.25,593 612,593 612,630 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="612,684 612,722 458.25,722 458.25,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,816 458.25,853 458.25,853 458.25,890 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,902 458.25,961 458.25,961 458.25,1020 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,902 458.25,961 891.25,961 891.25,1020 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,1074 458.25,1177 891.25,1177 891.25,1280 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="891.25,1074 891.25,1112 891.25,1112 891.25,1150 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="891.25,1204 891.25,1242 891.25,1242 891.25,1280 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="891.25,1292 891.25,1351 891.25,1351 891.25,1410 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="891.25,1464 891.25,1502 891.25,1502 891.25,1540 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="891.25,1596 891.25,1633 891.25,1633 891.25,1670 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="951.25,1697 1006.25,1697 1006.25,1568 891.25,1540 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="891.25,1596 891.25,1633 1011.25,1633 1011.25,1670 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="1011.25,1726 1011.25,1763 458.25,1763 458.25,1800 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,1854 458.25,1892 458.25,1892 458.25,1930 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,1984 458.25,2022 458.25,2022 458.25,2060 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="458.25,2114 458.25,2152 458.25,2152 458.25,2190 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+</g>
+<g id="edges-object">
+</g>
+<g id="nodes">
+<circle cx="139" cy="122" r="10" fill="#111" />
+<rect x="76" y="240" width="126" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="139" y="267" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Create Order</text>
+<rect x="76" y="370" width="126" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="139" y="397" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Submit Order</text>
+<polygon points="458.25,500 494.25,528 458.25,556 422.25,528" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="458.25" y="528" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Order Valid?</text>
+<rect x="395.25" y="630" width="126" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="458.25" y="657" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Reject Order</text>
+<polygon points="458.25,760 494.25,788 458.25,816 422.25,788" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="458.25" y="788" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Continue</text>
+<rect x="545.25" y="630" width="133.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="612" y="657" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Approve Order</text>
+<rect x="398.25" y="890" width="120" height="12" fill="#111" />
+<rect x="384" y="1020" width="148.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="458.25" y="1047" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Prepare Invoice</text>
+<rect x="824.5" y="1020" width="133.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="891.25" y="1047" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Reserve Stock</text>
+<rect x="824.5" y="1150" width="133.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="891.25" y="1177" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Package Items</text>
+<rect x="831.25" y="1280" width="120" height="12" fill="#111" />
+<rect x="831.25" y="1410" width="120" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="891.25" y="1437" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Ship Order</text>
+<polygon points="891.25,1540 927.25,1568 891.25,1596 855.25,1568" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="891.25" y="1568" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Delivered?</text>
+<rect x="831.25" y="1670" width="120" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="891.25" y="1697" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Wait</text>
+<polygon points="1011.25,1670 1047.25,1698 1011.25,1726 975.25,1698" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="1011.25" y="1698" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Delivered</text>
+<rect x="395.25" y="1800" width="126" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="458.25" y="1827" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Send Receipt</text>
+<rect x="391.5" y="1930" width="133.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="458.25" y="1957" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Archive Order</text>
+<rect x="398.25" y="2060" width="120" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="458.25" y="2087" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Close Order</text>
+<circle cx="458.25" cy="2206" r="15" fill="white" stroke="#111" stroke-width="2" />
+<circle cx="458.25" cy="2206" r="9" fill="#111" />
+</g>
+<g id="labels">
+</g>
+</svg>

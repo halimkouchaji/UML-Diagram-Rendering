@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1724" viewBox="0 0 1440 1724">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#222" />
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="white" />
+<g id="swimlanes">
+<rect x="40" y="40" width="330.5" height="1644" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="40" y="40" width="330.5" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="52" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Customer</text>
+<rect x="370.5" y="40" width="425.5" height="1644" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="370.5" y="40" width="425.5" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="382.5" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Sales</text>
+<rect x="796" y="40" width="302" height="1644" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="796" y="40" width="302" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="808" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Warehouse</text>
+<rect x="1098" y="40" width="302" height="1644" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="1098" y="40" width="302" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+<text x="1110" y="57" text-anchor="start" dominant-baseline="middle" font-family="Arial" font-size="12">Shipping</text>
+</g>
+<g id="edges-control">
+<polyline points="150.25,134 150.25,187 150.25,187 150.25,240 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="150.25,294 150.25,332 473.25,332 473.25,370 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,424 473.25,462 473.25,462 473.25,500 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,556 473.25,593 623.25,593 623.25,630 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,556 473.25,593 473.25,593 473.25,630 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,684 473.25,1047 1194,1047 1194,1410 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="623.25,684 623.25,722 473.25,722 473.25,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,816 473.25,853 473.25,853 473.25,890 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,902 473.25,961 892,961 892,1020 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="473.25,902 473.25,961 150.25,961 150.25,1020 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="892,1074 892,1112 892,1112 892,1150 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="150.25,1074 150.25,1112 892,1112 892,1150 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="892,1162 892,1221 1194,1221 1194,1280 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="1194,1334 1194,1372 1194,1372 1194,1410 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+</g>
+<g id="edges-object">
+</g>
+<g id="nodes">
+<circle cx="150.25" cy="122" r="10" fill="#111" />
+<rect x="90.25" y="240" width="120" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="150.25" y="267" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Place Order</text>
+<rect x="406.5" y="370" width="133.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="473.25" y="397" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Receive Order</text>
+<polygon points="473.25,500 509.25,528 473.25,556 437.25,528" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="473.25" y="528" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Payment Valid?</text>
+<rect x="410.25" y="630" width="126" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="473.25" y="657" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Reject Order</text>
+<rect x="560.25" y="630" width="126" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="623.25" y="657" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Accept Order</text>
+<polygon points="473.25,760 509.25,788 473.25,816 437.25,788" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="473.25" y="788" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Merge</text>
+<rect x="413.25" y="890" width="120" height="12" fill="#111" />
+<rect x="832" y="1020" width="120" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="892" y="1047" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Pack Items</text>
+<rect x="76" y="1020" width="148.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="150.25" y="1047" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Notify Customer</text>
+<rect x="832" y="1150" width="120" height="12" fill="#111" />
+<rect x="1134" y="1280" width="120" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="1194" y="1307" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Ship Order</text>
+<circle cx="1194" cy="1426" r="15" fill="white" stroke="#111" stroke-width="2" />
+<circle cx="1194" cy="1426" r="9" fill="#111" />
+</g>
+<g id="labels">
+</g>
+</svg>

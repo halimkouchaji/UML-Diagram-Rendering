@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML">
+  <uml:Model xmi:type="uml:Model" xmi:id="model_1" name="OrderProcessingModel">
+
+    <packagedElement xmi:type="uml:Activity" xmi:id="activity_1" name="ProcessOrder">
+
+      <!-- ==================== NODES ==================== -->
+
+      <!-- Initial Node -->
+      <node xmi:type="uml:InitialNode" xmi:id="node_initial" name="Start"/>
+
+      <!-- Action: Receive Order -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_receiveOrder" name="Receive Order"/>
+
+      <!-- Decision Node -->
+      <node xmi:type="uml:DecisionNode" xmi:id="node_decision" name="Payment Valid?"/>
+
+      <!-- Action: Reject Order (false branch) -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_rejectOrder" name="Reject Order"/>
+
+      <!-- Action: Accept Order (true branch) -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_acceptOrder" name="Accept Order"/>
+
+      <!-- Merge Node -->
+      <node xmi:type="uml:MergeNode" xmi:id="node_merge" name="Merge"/>
+
+      <!-- Fork Node -->
+      <node xmi:type="uml:ForkNode" xmi:id="node_fork" name="Fork"/>
+
+      <!-- Action: Pack Items (parallel branch 1) -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_packItems" name="Pack Items"/>
+
+      <!-- Action: Notify Customer (parallel branch 2) -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_notifyCustomer" name="Notify Customer"/>
+
+      <!-- Join Node -->
+      <node xmi:type="uml:JoinNode" xmi:id="node_join" name="Join"/>
+
+      <!-- Action: Ship Order -->
+      <node xmi:type="uml:OpaqueAction" xmi:id="node_shipOrder" name="Ship Order"/>
+
+      <!-- Activity Final Node -->
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="node_final" name="End"/>
+
+      <!-- ==================== EDGES ==================== -->
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_1"
+            source="node_initial" target="node_receiveOrder"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_2"
+            source="node_receiveOrder" target="node_decision"/>
+
+      <!-- True branch -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_3"
+            source="node_decision" target="node_acceptOrder">
+        <guard xmi:type="uml:LiteralString" xmi:id="guard_true" value="valid"/>
+      </edge>
+
+      <!-- False branch -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_4"
+            source="node_decision" target="node_rejectOrder">
+        <guard xmi:type="uml:LiteralString" xmi:id="guard_false" value="invalid"/>
+      </edge>
+
+      <!-- Reject leads straight to final -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_5"
+            source="node_rejectOrder" target="node_final"/>
+
+      <!-- Accept feeds merge -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_6"
+            source="node_acceptOrder" target="node_merge"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_7"
+            source="node_merge" target="node_fork"/>
+
+      <!-- Fork into two parallel actions -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_8"
+            source="node_fork" target="node_packItems"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_9"
+            source="node_fork" target="node_notifyCustomer"/>
+
+      <!-- Join synchronizes the two parallel actions -->
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_10"
+            source="node_packItems" target="node_join"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_11"
+            source="node_notifyCustomer" target="node_join"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_12"
+            source="node_join" target="node_shipOrder"/>
+
+      <edge xmi:type="uml:ControlFlow" xmi:id="edge_13"
+            source="node_shipOrder" target="node_final"/>
+
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>

@@ -1,0 +1,37 @@
+{
+  "diagramType": "ActivityDiagram",
+  "width": 520.5,
+  "height": 1594,
+  "swimlanes": [
+    {"id":"__unassigned__","name":"","x":40,"y":40,"width":440.5,"height":1514}
+  ],
+  "nodes": [
+    {"id":"node_initial","name":"Start","type":"Initial","swimlaneId":"__unassigned__","layer":0,"orderInLayer":0,"x":138.25,"y":110,"width":24,"height":24},
+    {"id":"node_receiveOrder","name":"Receive Order","type":"Action","swimlaneId":"__unassigned__","layer":1,"orderInLayer":0,"x":83.5,"y":240,"width":133.5,"height":54},
+    {"id":"node_decision","name":"Payment Valid?","type":"Decision","swimlaneId":"__unassigned__","layer":2,"orderInLayer":0,"x":114.25,"y":370,"width":72,"height":56},
+    {"id":"node_rejectOrder","name":"Reject Order","type":"Action","swimlaneId":"__unassigned__","layer":3,"orderInLayer":0,"x":87.25,"y":500,"width":126,"height":54},
+    {"id":"node_acceptOrder","name":"Accept Order","type":"Action","swimlaneId":"__unassigned__","layer":3,"orderInLayer":1,"x":237.25,"y":500,"width":126,"height":54},
+    {"id":"node_merge","name":"Merge","type":"Merge","swimlaneId":"__unassigned__","layer":4,"orderInLayer":0,"x":114.25,"y":630,"width":72,"height":56},
+    {"id":"node_fork","name":"Fork","type":"Fork","swimlaneId":"__unassigned__","layer":5,"orderInLayer":0,"x":90.25,"y":760,"width":120,"height":12},
+    {"id":"node_packItems","name":"Pack Items","type":"Action","swimlaneId":"__unassigned__","layer":6,"orderInLayer":0,"x":90.25,"y":890,"width":120,"height":54},
+    {"id":"node_notifyCustomer","name":"Notify Customer","type":"Action","swimlaneId":"__unassigned__","layer":6,"orderInLayer":1,"x":234.25,"y":890,"width":148.5,"height":54},
+    {"id":"node_join","name":"Join","type":"Join","swimlaneId":"__unassigned__","layer":7,"orderInLayer":0,"x":90.25,"y":1020,"width":120,"height":12},
+    {"id":"node_shipOrder","name":"Ship Order","type":"Action","swimlaneId":"__unassigned__","layer":8,"orderInLayer":0,"x":90.25,"y":1150,"width":120,"height":54},
+    {"id":"node_final","name":"End","type":"ActivityFinal","swimlaneId":"__unassigned__","layer":9,"orderInLayer":0,"x":134.25,"y":1280,"width":32,"height":32}
+  ],
+  "flows": [
+    {"id":"edge_1","type":"Control","fromId":"node_initial","toId":"node_receiveOrder","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":134},{"x":150.25,"y":187},{"x":150.25,"y":187},{"x":150.25,"y":240}]},
+    {"id":"edge_2","type":"Control","fromId":"node_receiveOrder","toId":"node_decision","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":294},{"x":150.25,"y":332},{"x":150.25,"y":332},{"x":150.25,"y":370}]},
+    {"id":"edge_3","type":"Control","fromId":"node_decision","toId":"node_acceptOrder","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":426},{"x":150.25,"y":463},{"x":300.25,"y":463},{"x":300.25,"y":500}]},
+    {"id":"edge_4","type":"Control","fromId":"node_decision","toId":"node_rejectOrder","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":426},{"x":150.25,"y":463},{"x":150.25,"y":463},{"x":150.25,"y":500}]},
+    {"id":"edge_5","type":"Control","fromId":"node_rejectOrder","toId":"node_final","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":554},{"x":150.25,"y":917},{"x":150.25,"y":917},{"x":150.25,"y":1280}]},
+    {"id":"edge_6","type":"Control","fromId":"node_acceptOrder","toId":"node_merge","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":300.25,"y":554},{"x":300.25,"y":592},{"x":150.25,"y":592},{"x":150.25,"y":630}]},
+    {"id":"edge_7","type":"Control","fromId":"node_merge","toId":"node_fork","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":686},{"x":150.25,"y":723},{"x":150.25,"y":723},{"x":150.25,"y":760}]},
+    {"id":"edge_8","type":"Control","fromId":"node_fork","toId":"node_packItems","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":772},{"x":150.25,"y":831},{"x":150.25,"y":831},{"x":150.25,"y":890}]},
+    {"id":"edge_9","type":"Control","fromId":"node_fork","toId":"node_notifyCustomer","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":772},{"x":150.25,"y":831},{"x":308.5,"y":831},{"x":308.5,"y":890}]},
+    {"id":"edge_10","type":"Control","fromId":"node_packItems","toId":"node_join","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":944},{"x":150.25,"y":982},{"x":150.25,"y":982},{"x":150.25,"y":1020}]},
+    {"id":"edge_11","type":"Control","fromId":"node_notifyCustomer","toId":"node_join","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":308.5,"y":944},{"x":308.5,"y":982},{"x":150.25,"y":982},{"x":150.25,"y":1020}]},
+    {"id":"edge_12","type":"Control","fromId":"node_join","toId":"node_shipOrder","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":1032},{"x":150.25,"y":1091},{"x":150.25,"y":1091},{"x":150.25,"y":1150}]},
+    {"id":"edge_13","type":"Control","fromId":"node_shipOrder","toId":"node_final","guardLabel":"","objectLabel":"","isBackEdge":false,"points":[{"x":150.25,"y":1204},{"x":150.25,"y":1242},{"x":150.25,"y":1242},{"x":150.25,"y":1280}]}
+  ]
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550.5" height="1334" viewBox="0 0 550.5 1334">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#222" />
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="white" />
+<g id="swimlanes">
+<rect x="40" y="40" width="470.5" height="1254" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="40" y="40" width="470.5" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+</g>
+<g id="edges-control">
+<polyline points="165.25,134 165.25,187 165.25,187 165.25,240 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,294 165.25,332 165.25,332 165.25,370 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,424 165.25,462 165.25,462 165.25,500 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,554 165.25,592 165.25,592 165.25,630 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,686 165.25,723 165.25,723 165.25,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,686 165.25,723 341.5,723 341.5,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="341.5,814 341.5,852 165.25,852 165.25,890 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,814 165.25,852 165.25,852 165.25,890 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="165.25,946 165.25,983 165.25,983 165.25,1020 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+</g>
+<g id="edges-object">
+</g>
+<g id="nodes">
+<circle cx="165.25" cy="122" r="10" fill="#111" />
+<rect x="91" y="240" width="148.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="165.25" y="267" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Browse Products</text>
+<rect x="76" y="370" width="178.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="165.25" y="397" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Add Product To Cart</text>
+<rect x="94.75" y="500" width="141" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="165.25" y="527" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Go To Checkout</text>
+<polygon points="165.25,630 201.25,658 165.25,686 129.25,658" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="165.25" y="658" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Payment Successful?</text>
+<rect x="98.5" y="760" width="133.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="165.25" y="787" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Confirm Order</text>
+<rect x="256" y="760" width="171" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="341.5" y="787" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Show Payment Error</text>
+<polygon points="165.25,890 201.25,918 165.25,946 129.25,918" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="165.25" y="918" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Continue</text>
+<circle cx="165.25" cy="1036" r="15" fill="white" stroke="#111" stroke-width="2" />
+<circle cx="165.25" cy="1036" r="9" fill="#111" />
+</g>
+<g id="labels">
+</g>
+</svg>

@@ -1,0 +1,52 @@
+# vcpkg
+/vcpkg/
+/vcpkg_installed/
+
+# Visual Studio
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.vcxproj.user
+
+# Build output
+x64/
+Debug/
+Release/
+build/
+Build/
+build-*/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment / secrets
+.env
+.env.*
+!.env.example

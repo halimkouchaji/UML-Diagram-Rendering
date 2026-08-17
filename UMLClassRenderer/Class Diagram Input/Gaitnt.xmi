@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001">
+
+<uml:Model xmi:id="model1" name="University">
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Person" name="Person">
+        <ownedAttribute xmi:id="a1" name="name" type="String"/>
+        <ownedAttribute xmi:id="a2" name="age" type="int"/>
+        <ownedAttribute xmi:id="a3" name="address" type="String"/>
+        <ownedOperation xmi:id="o1" name="getName"/>
+        <ownedOperation xmi:id="o2" name="setName"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Student" name="Student">
+        <generalization xmi:id="g1" general="Person"/>
+        <ownedAttribute xmi:id="a4" name="studentId" type="String"/>
+        <ownedAttribute xmi:id="a5" name="gpa" type="double"/>
+        <ownedOperation xmi:id="o3" name="registerCourse"/>
+        <ownedOperation xmi:id="o4" name="dropCourse"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Professor" name="Professor">
+        <generalization xmi:id="g2" general="Person"/>
+        <ownedAttribute xmi:id="a6" name="salary" type="double"/>
+        <ownedAttribute xmi:id="a7" name="rank" type="String"/>
+        <ownedOperation xmi:id="o5" name="teach"/>
+        <ownedOperation xmi:id="o6" name="grade"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Department" name="Department">
+        <ownedAttribute xmi:id="a8" name="name" type="String"/>
+        <ownedAttribute xmi:id="a9" name="building" type="String"/>
+        <ownedOperation xmi:id="o7" name="addProfessor"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Course" name="Course">
+        <ownedAttribute xmi:id="a10" name="code" type="String"/>
+        <ownedAttribute xmi:id="a11" name="title" type="String"/>
+        <ownedAttribute xmi:id="a12" name="credits" type="int"/>
+        <ownedOperation xmi:id="o8" name="enrollStudent"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Classroom" name="Classroom">
+        <ownedAttribute xmi:id="a13" name="roomNumber" type="String"/>
+        <ownedAttribute xmi:id="a14" name="capacity" type="int"/>
+        <ownedOperation xmi:id="o9" name="reserve"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Library" name="Library">
+        <ownedAttribute xmi:id="a15" name="name" type="String"/>
+        <ownedAttribute xmi:id="a16" name="location" type="String"/>
+        <ownedOperation xmi:id="o10" name="borrowBook"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Book" name="Book">
+        <ownedAttribute xmi:id="a17" name="isbn" type="String"/>
+        <ownedAttribute xmi:id="a18" name="title" type="String"/>
+        <ownedAttribute xmi:id="a19" name="author" type="String"/>
+        <ownedOperation xmi:id="o11" name="checkout"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Exam" name="Exam">
+        <ownedAttribute xmi:id="a20" name="date" type="String"/>
+        <ownedAttribute xmi:id="a21" name="duration" type="int"/>
+        <ownedOperation xmi:id="o12" name="schedule"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="Transcript" name="Transcript">
+        <ownedAttribute xmi:id="a22" name="cgpa" type="double"/>
+        <ownedOperation xmi:id="o13" name="calculateGPA"/>
+    </packagedElement>
+
+    <!-- Associations -->
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc1">
+        <ownedEnd xmi:id="e1" type="Student"/>
+        <ownedEnd xmi:id="e2" type="Course"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc2">
+        <ownedEnd xmi:id="e3" type="Professor"/>
+        <ownedEnd xmi:id="e4" type="Course"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc3">
+        <ownedEnd xmi:id="e5" type="Department"/>
+        <ownedEnd xmi:id="e6" type="Professor"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc4">
+        <ownedEnd xmi:id="e7" type="Department"/>
+        <ownedEnd xmi:id="e8" type="Student"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc5">
+        <ownedEnd xmi:id="e9" type="Library"/>
+        <ownedEnd xmi:id="e10" type="Book"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc6">
+        <ownedEnd xmi:id="e11" type="Student"/>
+        <ownedEnd xmi:id="e12" type="Transcript"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc7">
+        <ownedEnd xmi:id="e13" type="Course"/>
+        <ownedEnd xmi:id="e14" type="Exam"/>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Association" xmi:id="assoc8">
+        <ownedEnd xmi:id="e15" type="Course"/>
+        <ownedEnd xmi:id="e16" type="Classroom"/>
+    </packagedElement>
+
+</uml:Model>
+</xmi:XMI>

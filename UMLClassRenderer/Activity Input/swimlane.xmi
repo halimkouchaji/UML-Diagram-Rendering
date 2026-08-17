@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001"
+    xmi:version="2.5">
+
+<uml:Model xmi:id="model1" name="OrderSystem">
+
+<packagedElement
+    xmi:type="uml:Activity"
+    xmi:id="activity1"
+    name="Order Processing">
+
+    <!-- Swimlanes -->
+    <group xmi:type="uml:ActivityPartition"
+           xmi:id="customer"
+           name="Customer"/>
+
+    <group xmi:type="uml:ActivityPartition"
+           xmi:id="sales"
+           name="Sales"/>
+
+    <group xmi:type="uml:ActivityPartition"
+           xmi:id="warehouse"
+           name="Warehouse"/>
+
+    <!-- Nodes -->
+
+    <node xmi:type="uml:InitialNode"
+          xmi:id="start"
+          name="Start"
+          inPartition="customer"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a1"
+          name="Create Order"
+          inPartition="customer"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a2"
+          name="Submit Order"
+          inPartition="customer"/>
+
+    <node xmi:type="uml:DecisionNode"
+          xmi:id="d1"
+          name="Order Valid?"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a3"
+          name="Reject Order"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:MergeNode"
+          xmi:id="m1"
+          name="Continue"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a4"
+          name="Approve Order"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:ForkNode"
+          xmi:id="fork1"
+          name="Fork"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a5"
+          name="Prepare Invoice"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a6"
+          name="Reserve Stock"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a7"
+          name="Package Items"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:JoinNode"
+          xmi:id="join1"
+          name="Join"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a8"
+          name="Ship Order"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:DecisionNode"
+          xmi:id="d2"
+          name="Delivered?"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a9"
+          name="Wait"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:MergeNode"
+          xmi:id="m2"
+          name="Delivered"
+          inPartition="warehouse"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a10"
+          name="Send Receipt"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a11"
+          name="Archive Order"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:OpaqueAction"
+          xmi:id="a12"
+          name="Close Order"
+          inPartition="sales"/>
+
+    <node xmi:type="uml:ActivityFinalNode"
+          xmi:id="end"
+          name="End"
+          inPartition="sales"/>
+
+    <!-- Flows -->
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e1" source="start" target="a1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e2" source="a1" target="a2"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e3" source="a2" target="d1"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e4" source="d1" target="a3"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e5" source="a3" target="m1"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e6" source="d1" target="a4"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e7" source="a4" target="m1"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e8" source="m1" target="fork1"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e9" source="fork1" target="a5"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e10" source="fork1" target="a6"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e11" source="a5" target="join1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e12" source="a6" target="a7"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e13" source="a7" target="join1"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e14" source="join1" target="a8"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e15" source="a8" target="d2"/>
+
+    <!-- Loop -->
+    <edge xmi:type="uml:ControlFlow" xmi:id="e16" source="d2" target="a9"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e17" source="a9" target="d2"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e18" source="d2" target="m2"/>
+
+    <edge xmi:type="uml:ControlFlow" xmi:id="e19" source="m2" target="a10"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e20" source="a10" target="a11"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e21" source="a11" target="a12"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="e22" source="a12" target="end"/>
+
+</packagedElement>
+
+</uml:Model>
+
+</xmi:XMI>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001">
+
+    <uml:Model xmi:id="model1" name="LoginActivity">
+
+        <packagedElement 
+            xmi:type="uml:Activity"
+            xmi:id="activity1"
+            name="User Login">
+
+
+            <!-- Initial Node -->
+            <node
+                xmi:type="uml:InitialNode"
+                xmi:id="start"
+                name="Start"/>
+
+
+            <!-- Actions -->
+            <node
+                xmi:type="uml:Action"
+                xmi:id="enterUsername"
+                name="Enter Username"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="enterPassword"
+                name="Enter Password"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="checkCredentials"
+                name="Check Credentials"/>
+
+
+            <!-- Decision -->
+            <node
+                xmi:type="uml:DecisionNode"
+                xmi:id="decision1"
+                name="Valid?"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="openHome"
+                name="Open Home Page"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="showError"
+                name="Show Error Message"/>
+
+
+            <!-- Final Node -->
+            <node
+                xmi:type="uml:ActivityFinalNode"
+                xmi:id="end"
+                name="End"/>
+
+
+
+            <!-- Control Flow -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow1"
+                source="start"
+                target="enterUsername"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow2"
+                source="enterUsername"
+                target="enterPassword"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow3"
+                source="enterPassword"
+                target="checkCredentials"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow4"
+                source="checkCredentials"
+                target="decision1"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow5"
+                source="decision1"
+                target="openHome"/>
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow6"
+                source="decision1"
+                target="showError"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow7"
+                source="openHome"
+                target="end"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="flow8"
+                source="showError"
+                target="end"/>
+
+
+        </packagedElement>
+
+    </uml:Model>
+
+</xmi:XMI>

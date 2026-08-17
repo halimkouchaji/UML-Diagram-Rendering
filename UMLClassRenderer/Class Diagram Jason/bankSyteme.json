@@ -1,0 +1,187 @@
+{
+  "classes": [
+    {
+      "attributes": [
+        {
+          "name": "balance",
+          "type": "double",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Account",
+      "level": 0,
+      "name": "Account",
+      "operations": [
+        {
+          "name": "deposit",
+          "returnType": "",
+          "visibility": "private"
+        },
+        {
+          "name": "withdraw",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 143.0,
+      "x": 17.5,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "interestRate",
+          "type": "double",
+          "visibility": "private"
+        }
+      ],
+      "height": 70.0,
+      "id": "SavingsAccount",
+      "level": 1,
+      "name": "SavingsAccount",
+      "operations": [],
+      "width": 178.0,
+      "x": 0.0,
+      "y": 168.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 88.0,
+      "id": "Customer",
+      "level": 0,
+      "name": "Customer",
+      "operations": [],
+      "width": 122.0,
+      "x": 183.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 70.0,
+      "id": "Bank",
+      "level": 0,
+      "name": "Bank",
+      "operations": [],
+      "width": 122.0,
+      "x": 345.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "amount",
+          "type": "double",
+          "visibility": "private"
+        }
+      ],
+      "height": 70.0,
+      "id": "Loan",
+      "level": 0,
+      "name": "Loan",
+      "operations": [],
+      "width": 136.0,
+      "x": 507.0,
+      "y": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "from": "SavingsAccount",
+      "id": "g1",
+      "points": [
+        {
+          "x": 89.0,
+          "y": 168.0
+        },
+        {
+          "x": 89.0,
+          "y": 108.0
+        }
+      ],
+      "to": "Account",
+      "type": "generalization"
+    },
+    {
+      "from": "Bank",
+      "id": "assoc1",
+      "points": [
+        {
+          "x": 345.0,
+          "y": 35.0
+        },
+        {
+          "x": 305.0,
+          "y": 44.0
+        }
+      ],
+      "to": "Customer",
+      "type": "association"
+    },
+    {
+      "from": "Customer",
+      "id": "assoc2",
+      "points": [
+        {
+          "x": 183.0,
+          "y": 44.0
+        },
+        {
+          "x": 160.5,
+          "y": 54.0
+        }
+      ],
+      "to": "Account",
+      "type": "association"
+    },
+    {
+      "from": "Bank",
+      "id": "agg1",
+      "points": [
+        {
+          "x": 345.0,
+          "y": 35.0
+        },
+        {
+          "x": 160.5,
+          "y": 54.0
+        }
+      ],
+      "to": "Account",
+      "type": "aggregation"
+    },
+    {
+      "from": "Bank",
+      "id": "comp1",
+      "points": [
+        {
+          "x": 467.0,
+          "y": 35.0
+        },
+        {
+          "x": 507.0,
+          "y": 35.0
+        }
+      ],
+      "to": "Loan",
+      "type": "composition"
+    }
+  ]
+}

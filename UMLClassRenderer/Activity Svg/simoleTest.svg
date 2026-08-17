@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="543" height="1204" viewBox="0 0 543 1204">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#222" />
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="white" />
+<g id="swimlanes">
+<rect x="40" y="40" width="463" height="1124" fill="#f6f7f9" stroke="#999" stroke-width="1" />
+<rect x="40" y="40" width="463" height="34" fill="#e9edf3" stroke="#999" stroke-width="1" />
+</g>
+<g id="edges-control">
+<polyline points="161.5,134 161.5,187 161.5,187 161.5,240 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="161.5,294 161.5,332 161.5,332 161.5,370 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="161.5,424 161.5,462 161.5,462 161.5,500 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="161.5,554 161.5,592 161.5,592 161.5,630 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="161.5,686 161.5,723 161.5,723 161.5,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="161.5,686 161.5,723 341.5,723 341.5,760 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="161.5,814 161.5,852 161.5,852 161.5,890 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+<polyline points="341.5,814 341.5,852 161.5,852 161.5,890 " fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)" />
+</g>
+<g id="edges-object">
+</g>
+<g id="nodes">
+<circle cx="161.5" cy="122" r="10" fill="#111" />
+<rect x="91" y="240" width="141" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="161.5" y="267" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Enter Username</text>
+<rect x="91" y="370" width="141" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="161.5" y="397" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Enter Password</text>
+<rect x="79.75" y="500" width="163.5" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="161.5" y="527" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Check Credentials</text>
+<polygon points="161.5,630 197.5,658 161.5,686 125.5,658" fill="white" stroke="#222" stroke-width="1.5" />
+<text x="161.5" y="658" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Valid?</text>
+<rect x="91" y="760" width="141" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="161.5" y="787" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Open Home Page</text>
+<rect x="256" y="760" width="171" height="54" rx="8" ry="8" fill="white" stroke="#222" stroke-width="1.4" />
+<text x="341.5" y="787" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12">Show Error Message</text>
+<circle cx="161.5" cy="906" r="15" fill="white" stroke="#111" stroke-width="2" />
+<circle cx="161.5" cy="906" r="9" fill="#111" />
+</g>
+<g id="labels">
+</g>
+</svg>

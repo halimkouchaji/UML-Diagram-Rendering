@@ -1,0 +1,304 @@
+{
+  "classes": [
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "age",
+          "type": "int",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Person",
+      "level": 0,
+      "name": "Person",
+      "operations": [
+        {
+          "name": "getName",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 122.0,
+      "x": 116.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "memberId",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 90.0,
+      "id": "Member",
+      "level": 1,
+      "name": "Member",
+      "operations": [
+        {
+          "name": "borrowBook",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 150.0,
+      "x": 0.0,
+      "y": 168.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "employeeId",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 90.0,
+      "id": "Librarian",
+      "level": 1,
+      "name": "Librarian",
+      "operations": [
+        {
+          "name": "addBook",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 164.0,
+      "x": 190.0,
+      "y": 168.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "title",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "isbn",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Book",
+      "level": 1,
+      "name": "Book",
+      "operations": [
+        {
+          "name": "isAvailable",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 129.0,
+      "x": 394.0,
+      "y": 168.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 70.0,
+      "id": "Author",
+      "level": 0,
+      "name": "Author",
+      "operations": [],
+      "width": 122.0,
+      "x": 258.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "address",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 90.0,
+      "id": "Library",
+      "level": 0,
+      "name": "Library",
+      "operations": [
+        {
+          "name": "searchBook",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 143.0,
+      "x": 400.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 70.0,
+      "id": "Catalog",
+      "level": 0,
+      "name": "Catalog",
+      "operations": [
+        {
+          "name": "findBook",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 120.0,
+      "x": 703.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 50.0,
+      "id": "Printable",
+      "level": 0,
+      "name": "Printable",
+      "operations": [],
+      "width": 120.0,
+      "x": 563.0,
+      "y": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "from": "Member",
+      "id": "g1",
+      "points": [
+        {
+          "x": 75.0,
+          "y": 168.0
+        },
+        {
+          "x": 177.0,
+          "y": 108.0
+        }
+      ],
+      "to": "Person",
+      "type": "generalization"
+    },
+    {
+      "from": "Librarian",
+      "id": "g2",
+      "points": [
+        {
+          "x": 272.0,
+          "y": 168.0
+        },
+        {
+          "x": 177.0,
+          "y": 108.0
+        }
+      ],
+      "to": "Person",
+      "type": "generalization"
+    },
+    {
+      "from": "Book",
+      "id": "real1",
+      "points": [
+        {
+          "x": 458.5,
+          "y": 168.0
+        },
+        {
+          "x": 458.5,
+          "y": 50.0
+        }
+      ],
+      "to": "Printable",
+      "type": "realization"
+    },
+    {
+      "from": "Librarian",
+      "id": "dep1",
+      "points": [
+        {
+          "x": 354.0,
+          "y": 213.0
+        },
+        {
+          "x": 507.0,
+          "y": 35.0
+        }
+      ],
+      "to": "Catalog",
+      "type": "dependency"
+    },
+    {
+      "from": "Library",
+      "id": "assoc1",
+      "points": [
+        {
+          "x": 395.5,
+          "y": 90.0
+        },
+        {
+          "x": 458.5,
+          "y": 168.0
+        }
+      ],
+      "to": "Book",
+      "type": "association"
+    },
+    {
+      "from": "Author",
+      "id": "assoc2",
+      "points": [
+        {
+          "x": 284.0,
+          "y": 35.0
+        },
+        {
+          "x": 394.0,
+          "y": 222.0
+        }
+      ],
+      "to": "Book",
+      "type": "association"
+    },
+    {
+      "from": "Catalog",
+      "id": "agg1",
+      "points": [
+        {
+          "x": 567.0,
+          "y": 70.0
+        },
+        {
+          "x": 458.5,
+          "y": 168.0
+        }
+      ],
+      "to": "Book",
+      "type": "aggregation"
+    },
+    {
+      "from": "Library",
+      "id": "comp1",
+      "points": [
+        {
+          "x": 467.0,
+          "y": 45.0
+        },
+        {
+          "x": 507.0,
+          "y": 35.0
+        }
+      ],
+      "to": "Catalog",
+      "type": "composition"
+    }
+  ]
+}

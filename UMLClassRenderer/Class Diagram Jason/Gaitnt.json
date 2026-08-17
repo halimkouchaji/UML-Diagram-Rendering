@@ -1,0 +1,471 @@
+{
+  "classes": [
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "age",
+          "type": "int",
+          "visibility": "private"
+        },
+        {
+          "name": "address",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 144.0,
+      "id": "Person",
+      "level": 0,
+      "name": "Person",
+      "operations": [
+        {
+          "name": "getName",
+          "returnType": "",
+          "visibility": "private"
+        },
+        {
+          "name": "setName",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 143.0,
+      "x": 95.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "studentId",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "gpa",
+          "type": "double",
+          "visibility": "private"
+        }
+      ],
+      "height": 126.0,
+      "id": "Student",
+      "level": 1,
+      "name": "Student",
+      "operations": [
+        {
+          "name": "registerCourse",
+          "returnType": "",
+          "visibility": "private"
+        },
+        {
+          "name": "dropCourse",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 157.0,
+      "x": 0.0,
+      "y": 204.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "salary",
+          "type": "double",
+          "visibility": "private"
+        },
+        {
+          "name": "rank",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 126.0,
+      "id": "Professor",
+      "level": 1,
+      "name": "Professor",
+      "operations": [
+        {
+          "name": "teach",
+          "returnType": "",
+          "visibility": "private"
+        },
+        {
+          "name": "grade",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 136.0,
+      "x": 197.0,
+      "y": 204.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "building",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Department",
+      "level": 0,
+      "name": "Department",
+      "operations": [
+        {
+          "name": "addProfessor",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 150.0,
+      "x": 258.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "code",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "credits",
+          "type": "int",
+          "visibility": "private"
+        }
+      ],
+      "height": 126.0,
+      "id": "Course",
+      "level": 0,
+      "name": "Course",
+      "operations": [
+        {
+          "name": "enrollStudent",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 143.0,
+      "x": 428.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "roomNumber",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "capacity",
+          "type": "int",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Classroom",
+      "level": 0,
+      "name": "Classroom",
+      "operations": [
+        {
+          "name": "reserve",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 164.0,
+      "x": 591.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Library",
+      "level": 0,
+      "name": "Library",
+      "operations": [
+        {
+          "name": "borrowBook",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 150.0,
+      "x": 775.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "isbn",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "author",
+          "type": "String",
+          "visibility": "private"
+        }
+      ],
+      "height": 126.0,
+      "id": "Book",
+      "level": 0,
+      "name": "Book",
+      "operations": [
+        {
+          "name": "checkout",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 136.0,
+      "x": 950.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "date",
+          "type": "String",
+          "visibility": "private"
+        },
+        {
+          "name": "duration",
+          "type": "int",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Exam",
+      "level": 0,
+      "name": "Exam",
+      "operations": [
+        {
+          "name": "schedule",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 129.0,
+      "x": 1126.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "cgpa",
+          "type": "double",
+          "visibility": "private"
+        }
+      ],
+      "height": 90.0,
+      "id": "Transcript",
+      "level": 0,
+      "name": "Transcript",
+      "operations": [
+        {
+          "name": "calculateGPA",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 136.0,
+      "x": 1295.0,
+      "y": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "from": "Student",
+      "id": "g1",
+      "points": [
+        {
+          "x": 78.5,
+          "y": 204.0
+        },
+        {
+          "x": 166.5,
+          "y": 144.0
+        }
+      ],
+      "to": "Person",
+      "type": "generalization"
+    },
+    {
+      "from": "Professor",
+      "id": "g2",
+      "points": [
+        {
+          "x": 265.0,
+          "y": 204.0
+        },
+        {
+          "x": 166.5,
+          "y": 144.0
+        }
+      ],
+      "to": "Person",
+      "type": "generalization"
+    },
+    {
+      "from": "Student",
+      "id": "assoc1",
+      "points": [
+        {
+          "x": 157.0,
+          "y": 267.0
+        },
+        {
+          "x": 373.0,
+          "y": 63.0
+        }
+      ],
+      "to": "Course",
+      "type": "association"
+    },
+    {
+      "from": "Professor",
+      "id": "assoc2",
+      "points": [
+        {
+          "x": 265.0,
+          "y": 204.0
+        },
+        {
+          "x": 444.5,
+          "y": 126.0
+        }
+      ],
+      "to": "Course",
+      "type": "association"
+    },
+    {
+      "from": "Department",
+      "id": "assoc3",
+      "points": [
+        {
+          "x": 258.0,
+          "y": 108.0
+        },
+        {
+          "x": 265.0,
+          "y": 204.0
+        }
+      ],
+      "to": "Professor",
+      "type": "association"
+    },
+    {
+      "from": "Department",
+      "id": "assoc4",
+      "points": [
+        {
+          "x": 258.0,
+          "y": 108.0
+        },
+        {
+          "x": 78.5,
+          "y": 204.0
+        }
+      ],
+      "to": "Student",
+      "type": "association"
+    },
+    {
+      "from": "Library",
+      "id": "assoc5",
+      "points": [
+        {
+          "x": 910.0,
+          "y": 54.0
+        },
+        {
+          "x": 950.0,
+          "y": 63.0
+        }
+      ],
+      "to": "Book",
+      "type": "association"
+    },
+    {
+      "from": "Student",
+      "id": "assoc6",
+      "points": [
+        {
+          "x": 157.0,
+          "y": 267.0
+        },
+        {
+          "x": 1295.0,
+          "y": 45.0
+        }
+      ],
+      "to": "Transcript",
+      "type": "association"
+    },
+    {
+      "from": "Course",
+      "id": "assoc7",
+      "points": [
+        {
+          "x": 516.0,
+          "y": 63.0
+        },
+        {
+          "x": 1126.0,
+          "y": 54.0
+        }
+      ],
+      "to": "Exam",
+      "type": "association"
+    },
+    {
+      "from": "Course",
+      "id": "assoc8",
+      "points": [
+        {
+          "x": 516.0,
+          "y": 63.0
+        },
+        {
+          "x": 556.0,
+          "y": 54.0
+        }
+      ],
+      "to": "Classroom",
+      "type": "association"
+    }
+  ]
+}

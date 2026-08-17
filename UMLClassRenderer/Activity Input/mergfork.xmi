@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001">
+
+
+    <uml:Model xmi:id="model1" name="Order Process">
+
+
+        <packagedElement 
+            xmi:type="uml:Activity"
+            xmi:id="activity1"
+            name="Order Processing">
+
+
+            <!-- Nodes -->
+
+            <node
+                xmi:type="uml:InitialNode"
+                xmi:id="node_start"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="node_order"
+                name="Receive Order"/>
+
+
+            <!-- Fork -->
+
+            <node
+                xmi:type="uml:ForkNode"
+                xmi:id="node_fork"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="node_payment"
+                name="Process Payment"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="node_inventory"
+                name="Check Inventory"/>
+
+
+            <!-- Join -->
+
+            <node
+                xmi:type="uml:JoinNode"
+                xmi:id="node_join"/>
+
+
+            <!-- Decision -->
+
+            <node
+                xmi:type="uml:DecisionNode"
+                xmi:id="node_decision"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="node_ship"
+                name="Ship Order"/>
+
+
+            <node
+                xmi:type="uml:Action"
+                xmi:id="node_cancel"
+                name="Cancel Order"/>
+
+
+            <!-- Merge -->
+
+            <node
+                xmi:type="uml:MergeNode"
+                xmi:id="node_merge"/>
+
+
+            <node
+                xmi:type="uml:ActivityFinalNode"
+                xmi:id="node_end"/>
+
+
+
+            <!-- Edges -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge1"
+                source="node_start"
+                target="node_order"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge2"
+                source="node_order"
+                target="node_fork"/>
+
+
+            <!-- Fork outgoing -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge3"
+                source="node_fork"
+                target="node_payment"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge4"
+                source="node_fork"
+                target="node_inventory"/>
+
+
+
+            <!-- Join incoming -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge5"
+                source="node_payment"
+                target="node_join"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge6"
+                source="node_inventory"
+                target="node_join"/>
+
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge7"
+                source="node_join"
+                target="node_decision"/>
+
+
+
+            <!-- Decision -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge8"
+                source="node_decision"
+                target="node_ship"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge9"
+                source="node_decision"
+                target="node_cancel"/>
+
+
+
+            <!-- Merge -->
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge10"
+                source="node_ship"
+                target="node_merge"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge11"
+                source="node_cancel"
+                target="node_merge"/>
+
+
+            <edge
+                xmi:type="uml:ControlFlow"
+                xmi:id="edge12"
+                source="node_merge"
+                target="node_end"/>
+
+
+        </packagedElement>
+
+
+    </uml:Model>
+
+</xmi:XMI>

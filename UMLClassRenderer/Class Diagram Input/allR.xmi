@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xmi:XMI
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:uml="http://www.omg.org/spec/UML/20161101"
+    xmi:version="2.5">
+
+<uml:Model xmi:id="model1" name="CompleteClassDiagram">
+
+    <!-- ========================= -->
+    <!-- Interface -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Interface"
+        xmi:id="IPrintable"
+        name="Printable">
+
+        <ownedOperation
+            xmi:id="printOp"
+            name="print"/>
+
+    </packagedElement>
+
+
+    <!-- ========================= -->
+    <!-- Base Class -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Person"
+        name="Person">
+
+        <ownedAttribute
+            xmi:id="person_name"
+            name="name"
+            visibility="private"/>
+
+        <ownedAttribute
+            xmi:id="person_age"
+            name="age"
+            visibility="private"/>
+
+        <ownedOperation
+            xmi:id="walk"
+            name="walk"/>
+
+    </packagedElement>
+
+
+    <!-- ========================= -->
+    <!-- Student -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Student"
+        name="Student">
+
+        <!-- Inheritance -->
+        <generalization
+            xmi:id="gen1"
+            general="Person"/>
+
+        <!-- Realization -->
+        <interfaceRealization
+            xmi:id="real1"
+            contract="IPrintable"/>
+
+        <ownedAttribute
+            xmi:id="student_id"
+            name="studentId"/>
+
+        <ownedOperation
+            xmi:id="study"
+            name="study"/>
+
+    </packagedElement>
+
+
+    <!-- ========================= -->
+    <!-- Teacher -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Teacher"
+        name="Teacher">
+
+        <generalization
+            xmi:id="gen2"
+            general="Person"/>
+
+        <ownedOperation
+            xmi:id="teach"
+            name="teach"/>
+
+    </packagedElement>
+
+
+    <!-- ========================= -->
+    <!-- Course -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Course"
+        name="Course">
+
+        <ownedAttribute
+            xmi:id="course_name"
+            name="title"/>
+
+    </packagedElement>
+
+
+    <!-- ========================= -->
+    <!-- Department -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Department"
+        name="Department"/>
+
+
+    <!-- ========================= -->
+    <!-- University -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="University"
+        name="University"/>
+
+
+    <!-- ========================= -->
+    <!-- Library -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Library"
+        name="Library"/>
+
+
+    <!-- ========================= -->
+    <!-- Book -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Book"
+        name="Book"/>
+
+
+    <!-- ========================= -->
+    <!-- Printer -->
+    <!-- ========================= -->
+
+    <packagedElement
+        xmi:type="uml:Class"
+        xmi:id="Printer"
+        name="Printer"/>
+
+
+
+    <!-- ====================================================== -->
+    <!-- Association : Student ---- Course -->
+    <!-- ====================================================== -->
+
+    <packagedElement
+        xmi:type="uml:Association"
+        xmi:id="assoc1">
+
+        <ownedEnd
+            xmi:id="studentEnd"
+            name="student"
+            type="Student"
+            association="assoc1">
+
+            <lowerValue
+                xmi:type="uml:LiteralInteger"
+                value="0"/>
+
+            <upperValue
+                xmi:type="uml:LiteralUnlimitedNatural"
+                value="*"/>
+
+        </ownedEnd>
+
+        <ownedEnd
+            xmi:id="courseEnd"
+            name="course"
+            type="Course"
+            association="assoc1">
+
+            <lowerValue
+                xmi:type="uml:LiteralInteger"
+                value="1"/>
+
+            <upperValue
+                xmi:type="uml:LiteralUnlimitedNatural"
+                value="*"/>
+
+        </ownedEnd>
+
+    </packagedElement>
+
+
+
+    <!-- ====================================================== -->
+    <!-- Aggregation : Department o---- Teacher -->
+    <!-- ====================================================== -->
+
+    <packagedElement
+        xmi:type="uml:Association"
+        xmi:id="aggregation1">
+
+        <ownedEnd
+            xmi:id="deptEnd"
+            type="Department"
+            aggregation="shared"
+            association="aggregation1"/>
+
+        <ownedEnd
+            xmi:id="teacherEnd"
+            type="Teacher"
+            association="aggregation1"/>
+
+    </packagedElement>
+
+
+
+    <!-- ====================================================== -->
+    <!-- Composition : University *---- Department -->
+    <!-- ====================================================== -->
+
+    <packagedElement
+        xmi:type="uml:Association"
+        xmi:id="composition1">
+
+        <ownedEnd
+            xmi:id="uniEnd"
+            type="University"
+            aggregation="composite"
+            association="composition1"/>
+
+        <ownedEnd
+            xmi:id="depEnd"
+            type="Department"
+            association="composition1"/>
+
+    </packagedElement>
+
+
+
+    <!-- ====================================================== -->
+    <!-- Composition : Library *---- Book -->
+    <!-- ====================================================== -->
+
+    <packagedElement
+        xmi:type="uml:Association"
+        xmi:id="composition2">
+
+        <ownedEnd
+            xmi:id="libEnd"
+            type="Library"
+            aggregation="composite"
+            association="composition2"/>
+
+        <ownedEnd
+            xmi:id="bookEnd"
+            type="Book"
+            association="composition2"/>
+
+    </packagedElement>
+
+
+
+    <!-- ====================================================== -->
+    <!-- Dependency : Student ----> Printer -->
+    <!-- ====================================================== -->
+
+    <packagedElement
+        xmi:type="uml:Dependency"
+        xmi:id="dep1"
+        client="Student"
+        supplier="Printer"/>
+
+
+
+    <!-- ====================================================== -->
+    <!-- Dependency : Teacher ----> Printer -->
+    <!-- ====================================================== -->
+
+    <packagedElement
+        xmi:type="uml:Dependency"
+        xmi:id="dep2"
+        client="Teacher"
+        supplier="Printer"/>
+
+
+
+</uml:Model>
+
+</xmi:XMI>

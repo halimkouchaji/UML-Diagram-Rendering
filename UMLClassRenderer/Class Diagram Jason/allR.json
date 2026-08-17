@@ -1,0 +1,307 @@
+{
+  "classes": [
+    {
+      "attributes": [],
+      "height": 70.0,
+      "id": "IPrintable",
+      "level": 0,
+      "name": "Printable",
+      "operations": [
+        {
+          "name": "print",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 120.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "name",
+          "type": "",
+          "visibility": "private"
+        },
+        {
+          "name": "age",
+          "type": "",
+          "visibility": "private"
+        }
+      ],
+      "height": 108.0,
+      "id": "Person",
+      "level": 0,
+      "name": "Person",
+      "operations": [
+        {
+          "name": "walk",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 120.0,
+      "x": 140.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "studentId",
+          "type": "",
+          "visibility": "private"
+        }
+      ],
+      "height": 90.0,
+      "id": "Student",
+      "level": 1,
+      "name": "Student",
+      "operations": [
+        {
+          "name": "study",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 120.0,
+      "x": 0.0,
+      "y": 168.0
+    },
+    {
+      "attributes": [],
+      "height": 70.0,
+      "id": "Teacher",
+      "level": 1,
+      "name": "Teacher",
+      "operations": [
+        {
+          "name": "teach",
+          "returnType": "",
+          "visibility": "private"
+        }
+      ],
+      "width": 120.0,
+      "x": 160.0,
+      "y": 168.0
+    },
+    {
+      "attributes": [
+        {
+          "name": "title",
+          "type": "",
+          "visibility": "private"
+        }
+      ],
+      "height": 70.0,
+      "id": "Course",
+      "level": 0,
+      "name": "Course",
+      "operations": [],
+      "width": 120.0,
+      "x": 320.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 50.0,
+      "id": "Department",
+      "level": 0,
+      "name": "Department",
+      "operations": [],
+      "width": 120.0,
+      "x": 480.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 50.0,
+      "id": "University",
+      "level": 0,
+      "name": "University",
+      "operations": [],
+      "width": 120.0,
+      "x": 640.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 50.0,
+      "id": "Library",
+      "level": 0,
+      "name": "Library",
+      "operations": [],
+      "width": 120.0,
+      "x": 800.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 50.0,
+      "id": "Book",
+      "level": 0,
+      "name": "Book",
+      "operations": [],
+      "width": 120.0,
+      "x": 960.0,
+      "y": 0.0
+    },
+    {
+      "attributes": [],
+      "height": 50.0,
+      "id": "Printer",
+      "level": 0,
+      "name": "Printer",
+      "operations": [],
+      "width": 120.0,
+      "x": 1120.0,
+      "y": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "from": "Student",
+      "id": "gen1",
+      "points": [
+        {
+          "x": 60.0,
+          "y": 168.0
+        },
+        {
+          "x": 140.0,
+          "y": 108.0
+        }
+      ],
+      "to": "Person",
+      "type": "generalization"
+    },
+    {
+      "from": "Teacher",
+      "id": "gen2",
+      "points": [
+        {
+          "x": 220.0,
+          "y": 168.0
+        },
+        {
+          "x": 140.0,
+          "y": 108.0
+        }
+      ],
+      "to": "Person",
+      "type": "generalization"
+    },
+    {
+      "from": "Student",
+      "id": "real1",
+      "points": [
+        {
+          "x": 60.0,
+          "y": 168.0
+        },
+        {
+          "x": 60.0,
+          "y": 70.0
+        }
+      ],
+      "to": "IPrintable",
+      "type": "realization"
+    },
+    {
+      "from": "Student",
+      "id": "dep1",
+      "points": [
+        {
+          "x": 120.0,
+          "y": 213.0
+        },
+        {
+          "x": 1120.0,
+          "y": 25.0
+        }
+      ],
+      "to": "Printer",
+      "type": "dependency"
+    },
+    {
+      "from": "Teacher",
+      "id": "dep2",
+      "points": [
+        {
+          "x": 280.0,
+          "y": 203.0
+        },
+        {
+          "x": 1120.0,
+          "y": 25.0
+        }
+      ],
+      "to": "Printer",
+      "type": "dependency"
+    },
+    {
+      "from": "Student",
+      "id": "assoc1",
+      "points": [
+        {
+          "x": 120.0,
+          "y": 213.0
+        },
+        {
+          "x": 320.0,
+          "y": 35.0
+        }
+      ],
+      "to": "Course",
+      "type": "association"
+    },
+    {
+      "from": "Department",
+      "id": "aggregation1",
+      "points": [
+        {
+          "x": 480.0,
+          "y": 25.0
+        },
+        {
+          "x": 280.0,
+          "y": 203.0
+        }
+      ],
+      "to": "Teacher",
+      "type": "aggregation"
+    },
+    {
+      "from": "University",
+      "id": "composition1",
+      "points": [
+        {
+          "x": 640.0,
+          "y": 25.0
+        },
+        {
+          "x": 600.0,
+          "y": 25.0
+        }
+      ],
+      "to": "Department",
+      "type": "composition"
+    },
+    {
+      "from": "Library",
+      "id": "composition2",
+      "points": [
+        {
+          "x": 920.0,
+          "y": 25.0
+        },
+        {
+          "x": 960.0,
+          "y": 25.0
+        }
+      ],
+      "to": "Book",
+      "type": "composition"
+    }
+  ]
+}
